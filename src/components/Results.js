@@ -18,7 +18,7 @@ function Results(props) {
   const [pokemonArray, setPokemonArray] = useState([]);
   const [cartValue, setCartValue] = useState(0); // create another cart to meet project requirements in GA
 
-  const key = process.env.apiKey;
+  const key = process.env;
   // const pageSize = 10;
   // let pokeName = "charizard";
   const callTenCharizard = async () => {

@@ -1,9 +1,10 @@
-import "./App.css";
-import Home from "./Pages/Home";
-import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //import components
+import Home from "./Pages/Home";
+
 import SignUpForm from "./Components/SignUpForm";
 import WatchList from "./Pages/WatchList";
 
