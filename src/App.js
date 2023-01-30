@@ -1,17 +1,39 @@
-import React from "react";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Home from "./pages/Home";
-import { Container } from "react-bootstrap";
+import Home from "./Pages/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 
+//import components
+import SignUpForm from "./Components/SignUpForm";
+import WatchList from "./Pages/WatchList";
+
+//import Route
+import { Route, Switch } from "react-router-dom";
+
+// import
+
+import Navigation from "./Components/Navigation";
+import SearchPage from "./Pages/SearchPage";
 
 function App() {
   return (
-    <>
-        <Home/>
-    </>
-
-
+    <div className="App">
+      <Navigation />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/signup">
+          <SignUpForm />
+        </Route>
+        <Route exact path="/watchlist">
+          <WatchList />
+        </Route>
+        <Route exact path="/search">
+          <SearchPage />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 

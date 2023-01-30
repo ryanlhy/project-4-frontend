@@ -1,18 +1,27 @@
-import { Container, Nav } from "react-bootstrap";
-import SearchBar from "../components/SearchBar";
-import NavBar from "../components/NavBar";
-import ProductList from "../components/ProductList";
-import products from '../data.js';
+// import Form from "react-bootstrap/Form";
+// import SignUpForm from "./SignUpForm";
+// import Navigation from "./Navigation";
+import React from "react";
 
+import Results from "../Components/Results"
+import Search from "../Components/SearchBar";
+import { Container } from "react-bootstrap";
+import Footer from "../Components/Footer";
 
 function Home() {
-    return (
-        <Container className="w-100">
-            <NavBar/>
-            <SearchBar/>
-            <ProductList products={products}/>
-        </Container>
-    )
+  return (
+    <div className="bg-light">
+      <h1>Pokemon TCG Watchlist</h1>
+      <Container>
+        <Search />
+      </Container>
+      
+      <Results />
+      {/* <SignUpForm /> */}
+      {/* <ApiPokemon /> */}
+      <Footer />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
